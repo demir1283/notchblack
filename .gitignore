@@ -1,0 +1,13 @@
+# Derleme ciktisi
+/build/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Swift / Xcode (ileride Xcode projesine gecilirse diye)
+.swiftpm/
+.build/
+*.xcodeproj/xcuserdata/
+DerivedData/
