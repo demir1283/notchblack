@@ -1,5 +1,17 @@
 # NotchBlack
 
+<p align="center">
+  <img src="assets/demo.gif" alt="NotchBlack demo - notch'u menü çubuğu simgesinden açıp kapatma" width="700">
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <img alt="Platform" src="https://img.shields.io/badge/platform-macOS-lightgrey">
+  <img alt="Swift" src="https://img.shields.io/badge/swift-AppKit-orange">
+  <img alt="RAM" src="https://img.shields.io/badge/RAM-~18MB-success">
+  <img alt="CPU idle" src="https://img.shields.io/badge/CPU%20(idle)-%7E0%25-success">
+</p>
+
 macOS notch'unu (ve/veya menü çubuğunu) siyaha boyayan, minimum kaynak tüketen, native bir araç.
 
 TopNotch gibi uygulamaların yerine geçmek için yazıldı — duvar kağıdına bağımlı kalmadan, tamamen AppKit pencere katmanı üzerinden çalışır. Bu yüzden macOS sürüm güncellemelerine (TopNotch'un macOS 27'de bozulduğu gibi) karşı daha dayanıklıdır.
