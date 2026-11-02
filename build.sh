@@ -23,6 +23,9 @@ swiftc \
 echo "==> Info.plist kopyalaniyor"
 cp "$ROOT/Info.plist" "$APP_BUNDLE/Contents/Info.plist"
 
+echo "==> Ikon kopyalaniyor"
+cp "$ROOT/Resources/AppIcon.icns" "$APP_BUNDLE/Contents/Resources/AppIcon.icns"
+
 echo "==> Ad-hoc imzalaniyor"
 codesign --force --deep --sign - "$APP_BUNDLE"
 

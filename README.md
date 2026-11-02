@@ -1,4 +1,8 @@
-# NotchBlack
+<p align="center">
+  <img src="assets/icon.png" alt="NotchBlack ikonu" width="128">
+</p>
+
+<h1 align="center">NotchBlack</h1>
 
 <p align="center">
   <img src="assets/demo.gif" alt="NotchBlack demo - notch'u menü çubuğu simgesinden açıp kapatma" width="700">

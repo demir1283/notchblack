@@ -14,15 +14,42 @@ final class StatusItem: NSObject, NSMenuDelegate {
         super.init()
 
         if let button = item.button {
-            button.image = NSImage(
-                systemSymbolName: "rectangle.bottomthird.inset.filled",
-                accessibilityDescription: "NotchBlack"
-            )
+            button.image = StatusItem.makeIcon()
         }
 
         let menu = NSMenu()
         menu.delegate = self
         item.menu = menu
+    }
+
+    /// Uygulama ikonundaki "notch" kapsulunun menu cubugu surumu.
+    /// Kodla cizilir ve template olarak isaretlenir: macOS acik/koyu modda
+    /// rengi kendisi ayarlar, her olcekte keskin kalir.
+    static func makeIcon() -> NSImage {
+        let size = NSSize(width: 18, height: 18)
+        let image = NSImage(size: size, flipped: false) { rect in
+            // Ekranin ust kenarini temsil eden ince cerceve
+            let frame = NSBezierPath(roundedRect: rect.insetBy(dx: 1.5, dy: 3.5), xRadius: 2.5, yRadius: 2.5)
+            frame.lineWidth = 1.4
+            NSColor.black.setStroke()
+            frame.stroke()
+
+            // Ust kenara yapisik notch kapsulu
+            let pillWidth: CGFloat = 7
+            let pillHeight: CGFloat = 4
+            let pill = NSRect(
+                x: rect.midX - pillWidth / 2,
+                y: rect.maxY - 3.5 - pillHeight + 0.7,
+                width: pillWidth,
+                height: pillHeight
+            )
+            NSColor.black.setFill()
+            NSBezierPath(roundedRect: pill, xRadius: pillHeight / 2, yRadius: pillHeight / 2).fill()
+            return true
+        }
+        image.isTemplate = true
+        image.accessibilityDescription = "NotchBlack"
+        return image
     }
 
     func menuNeedsUpdate(_ menu: NSMenu) {
