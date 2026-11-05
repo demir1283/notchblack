@@ -38,7 +38,7 @@ xcode-select --install   # zaten kuruluysa atla
 ```
 
 ```bash
-git clone https://github.com/<kullanici-adin>/notchblack.git
+git clone https://github.com/demir1283/notchblack.git
 cd notchblack
 ./build.sh
 ```
